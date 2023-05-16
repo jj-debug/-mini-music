@@ -1,0 +1,7 @@
+<view class="title">
+  <view class="title-name">{{ titleName }}</view>
+  <view class="more">
+    <text>更多</text>
+    <text class="iconfont icon-youjiantou"></text>
+  </view>
+</view>

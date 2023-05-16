@@ -1,0 +1,59 @@
+/**index.wxss**/
+.padding {
+  padding: 0rpx 40rpx;
+}
+.mTop {
+  margin-top: 50rpx;
+}
+
+.header {
+  margin-top: 40rpx;
+}
+
+.search {
+  padding: 0 30rpx;
+  height: 60rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+}
+
+/* 歌曲推荐*/
+.recommend-box {
+  /* height: 160rpx; */
+  /* width: 100%; */
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.recommend-box image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 14rpx;
+}
+.recommend-box .info {
+  margin-left: 20rpx;
+  display: flex;
+  flex-direction: column;
+}
+.musicName{
+  font-size: 34rpx;
+  margin-bottom: 10rpx;
+}
+.singer {
+  font-size: 28rpx;
+  color: #aaa;
+}
+.recommend-box .iconfont{
+  position: absolute;
+  right: 0;
+  color: #aaa;
+  /* align-self: flex-end; */
+}
+
+/* 轮播图 */
+.banners{
+  margin-top: 50rpx;
+}
+
+/* 排行榜 */

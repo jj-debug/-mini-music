@@ -1,0 +1,9 @@
+<!--components/scroll/scroll.wxml-->
+<scroll-view enable-flex class="hot-list-box" scroll-x="true" style="width: 100%">
+  <view bindtap="handleList" data-id="{{item.id}}" class="scrollItem" wx:for="{{ hotList }}" wx:key="id">
+    <image class="album" src="{{item.picUrl}}" mode="" />
+    <text>
+      {{ item.name }}
+    </text>
+  </view>
+</scroll-view>

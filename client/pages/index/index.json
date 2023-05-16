@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "title": "/components/title/title",
+    "scroll": "/components/scroll/scroll",
+    "rank": "/components/rank/rank"
+  }
+}

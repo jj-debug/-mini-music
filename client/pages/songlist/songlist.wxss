@@ -1,0 +1,36 @@
+/* pages/songlist.wxss */
+.scroll-wrapper {
+  height: 100vh;
+}
+
+.song{
+  margin: 40rpx 30rpx;
+  display: flex;
+  height: 110rpx;
+}
+
+.index{
+  width: 70rpx;
+  height: 100%;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.song-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.singers{
+  display: flex;
+}
+.singer{
+  font-size: 22rpx;
+  color: #aaa;
+}
+.singer::after{
+  content: '/';
+}
+.singer:last-child::after{
+  content: none;
+}

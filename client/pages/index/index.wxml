@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="padding">
+  <view class="header mTop">
+    <input 	focus="true" class="search" type="text" placeholder="搜索" />
+  </view>
+  <view class="recommend mTop">
+    <title></title>
+    <view class="recommend-box">
+      <image src="/static/img/one.jpg" alt="" />
+      <view class="info">
+        <text class="musicName">可能</text>
+        <text class="singer">程响 · 可能</text>
+      </view>
+      <text class="iconfont icon-youjiantou"></text>
+    </view>
+  </view>
+
+  <view class="banners">
+    <swiper	indicator-dots	autoplay 	indicator-active-color="#fff">
+      <swiper-item wx:for="{{banners}}" wx:key="item.targetId" item-id="item.targetId">
+        <image src="{{item.pic}}" mode=""/>
+      </swiper-item>
+    </swiper>
+  </view>
+
+  <view class="hot-list mTop">
+    <title titleName="官方歌单"></title>
+    <scroll hotList="{{hotList}}"></scroll>
+  </view>
+
+  <view class="rank mTop">
+    <title titleName="巅峰榜"></title>
+    <rank idx="1"></rank>
+    <rank idx="2"></rank>
+    <rank idx="3"></rank>
+  </view>
+</view>

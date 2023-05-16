@@ -1,0 +1,17 @@
+/* components/title.wxss */
+@import '/static/iconfont/inconfont.wxss';
+/* 标题 */
+.title {
+  height: 70rpx;
+}
+.title-name {
+  float: left;
+  font-size: 35rpx;
+  font-weight: 600;
+}
+
+.more {
+  float: right;
+  font-size: 26rpx;
+  color: #aaa;
+}

@@ -1,0 +1,19 @@
+<!--components/rank/rank.wxml-->
+<view class="rankBox" bindtap="toSongList" >
+  <view class="rankContainer">
+    <view class="rankTitle">
+      {{playListName}}
+    </view>
+    <view class="rankList">
+      <view wx:if="{{ index<3 }}" class="song" wx:for="{{playList}}" wx:key="id">
+        {{index+1}}. {{item.name}} 
+        <view class="singer" wx:for="{{item.ar}}" wx:for-item="j" wx:key="id">
+          - {{j.name}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="rankAlbum">
+    <image class="img" src="{{ playList[0].al.picUrl}}" mode="" />
+  </view>
+</view>

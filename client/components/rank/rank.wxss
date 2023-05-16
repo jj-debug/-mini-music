@@ -1,0 +1,42 @@
+/* components/rank/rank.wxss */
+
+
+.rankBox {
+  margin-bottom: 30rpx;
+  background-color: #ddd;
+  height: 210rpx;
+  border-radius: 20rpx;
+  padding-left: 20rpx;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rankTitle{
+  font-size: 30rpx;
+  margin-top: 25rpx;
+  margin-bottom: 16rpx;
+}
+.rankList{
+  font-size: 23rpx;
+  height: 50rpx;
+}
+.rankList .song{
+  margin-bottom: 5rpx;
+  display: flex;
+}
+.rankList .singer{
+  margin-left: 5rpx;
+  color: #aaa;
+}
+.rankList .singer::after{
+  content: "/";
+}
+.rankList .singer:last-child::after{
+  content: none;
+}
+
+.rankAlbum .img{
+  width: 200rpx;
+  height: 200rpx;
+}

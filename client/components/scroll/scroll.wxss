@@ -1,0 +1,14 @@
+/* components/scroll/scroll.wxss */
+.hot-list-box{
+  height: 312rpx;
+  display: flex;
+}
+.scrollItem {
+  margin-right: 18rpx;
+  font-size: 25rpx;
+}
+.scrollItem .album{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 16rpx;
+}
