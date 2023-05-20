@@ -1,8 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/songlist/songlist",
-    "pages/MV/MV"
+    "pages/searchPage/searchPage",
+    "pages/playPage/playPage",
+    "pages/rankPage/rankPage",
+    "pages/MV/MV",
+    "pages/searchResPage/searchResPage"
   ],
   "window": {
     "backgroundTextStyle": "light",

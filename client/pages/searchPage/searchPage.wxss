@@ -1,0 +1,32 @@
+/* pages/search/search.wxss */
+
+.search {
+  padding: 0 30rpx;
+  height: 60rpx;
+  background: #fff;
+  border-radius: 30rpx;
+  font-size: 28rpx;
+}
+.hot-search{
+  margin-top: 50rpx;
+}
+.title{
+  font-size: 40rpx;
+}
+.hot-search-list{
+  display: flex;
+  flex-flow: row wrap;
+}
+.hot-search-item{
+  font-size: 28rpx;
+  /* margin: 0 !important;
+  padding: 0 !important;
+  width: 100rpx !important; */
+  background-color: #fff;
+  border-radius: 30rpx;
+  height: auto;
+  width: auto;
+  padding: 9rpx 16rpx;
+  margin-top: 30rpx;
+  margin-right: 25rpx;
+}

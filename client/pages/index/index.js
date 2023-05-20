@@ -24,7 +24,12 @@ Page({
     console.log(this.data.hotList);
   },
 
-
+  toSearchPage() {
+    console.log(1);
+    wx.navigateTo({
+      url: '../searchPage/searchPage',
+    })
+  },
 
 
   getUserProfile(e) {

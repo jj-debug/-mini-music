@@ -1,0 +1,17 @@
+<!--pages/searchPage/searchPage.wxml-->
+<view class="padding">
+  <view class="header mTop">
+    <input bindconfirm="getSearchResult" focus="true" class="search" type="text" placeholder="搜索" />
+  </view>
+  <view class="hot-search">
+    <view class="title">热门搜索</view>
+    <view class="hot-search-list">
+      <!-- <button bindtap="getSearchResult" wx:if="{{index < 11}}" wx:for="{{hotSearchList}}" wx:key="score" class="hot-search-item">
+        {{item.searchWord}}
+      </button> -->
+      <view data-keywords="{{item.searchWord}}" bindtap="getSearchResult" wx:if="{{index < 11}}" wx:for="{{hotSearchList}}" wx:key="score" class="hot-search-item">
+        {{item.searchWord}}
+      </view>
+    </view>
+  </view>
+</view>

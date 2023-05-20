@@ -1,4 +1,4 @@
-// pages/songlist.js
+// pages/rankPage.js
 import request from '../../utils/request'
 Page({
 
@@ -17,14 +17,14 @@ Page({
    * 生命周期函数--监听页面加载
    */
   async onLoad(options) {
-    let res = await request('/top/list', {
+    let res = await request("/top/list", {
       idx: options.idx
     })
     this.setData({
       // playList: res.playlist.tracks
-      allList: res.playlist.tracks
+      allList: res.playlist.tracks || res.result.songs
     })
-    console.log(this.data.playList);
+    console.log(this.data.allList);
     this.renderNextPage()
   },
 
@@ -52,7 +52,7 @@ Page({
       this.setData({
         loadingMore: false
       })
-    }, 2000)
+    }, 500)
   },
 
   /**

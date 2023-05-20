@@ -17,22 +17,22 @@
   margin-top: 25rpx;
   margin-bottom: 16rpx;
 }
-.rankList{
+.rankPage{
   font-size: 23rpx;
   height: 50rpx;
 }
-.rankList .song{
+.rankPage .song{
   margin-bottom: 5rpx;
   display: flex;
 }
-.rankList .singer{
+.rankPage .singer{
   margin-left: 5rpx;
   color: #aaa;
 }
-.rankList .singer::after{
+.rankPage .singer::after{
   content: "/";
 }
-.rankList .singer:last-child::after{
+.rankPage .singer:last-child::after{
   content: none;
 }
 

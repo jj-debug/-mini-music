@@ -1,15 +1,4 @@
 /**index.wxss**/
-.padding {
-  padding: 0rpx 40rpx;
-}
-.mTop {
-  margin-top: 50rpx;
-}
-
-.header {
-  margin-top: 40rpx;
-}
-
 .search {
   padding: 0 30rpx;
   height: 60rpx;
@@ -55,5 +44,4 @@
 .banners{
   margin-top: 50rpx;
 }
-
 /* 排行榜 */

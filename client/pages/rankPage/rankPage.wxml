@@ -1,4 +1,4 @@
-<!--pages/songlist.wxml-->
+<!--pages/rankPage.wxml-->
 <!-- 外边路由传参 -->
 <!-- <view class="song" wx:for="{{playList}}" wx:key="id">
   <view class="index">{{index+1}} </view>

@@ -26,6 +26,7 @@ Component({
       let res = await request('/top/list', {
         idx: this.properties.idx
       })
+      console.log(res.playlist);
       this.setData({
         playListName: res.playlist.name,
         playList: res.playlist.tracks
@@ -40,9 +41,9 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    toSongList() {
+    torankPage() {
       wx.navigateTo({
-        url: '/pages/songlist/songlist?idx=' + this.properties.idx ,
+        url: '/pages/rankPage/rankPage?path=/top/list&idx=' + this.properties.idx ,
       })
     }
   }

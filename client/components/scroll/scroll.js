@@ -23,7 +23,7 @@ Component({
   methods: {
     handleList(event) {
       wx.navigateTo({
-        url: '/pages/songlist/songlist?id=' + event.currentTarget.dataset.id,
+        url: '/pages/rankPage/rankPage?id=' + event.currentTarget.dataset.id,
       })
     }
   }

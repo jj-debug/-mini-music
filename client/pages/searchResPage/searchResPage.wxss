@@ -1,8 +1,4 @@
-/* pages/songlist.wxss */
-.scroll-wrapper {
-  height: 100vh;
-}
-
+/* pages/searchResPage/searchResPage.wxss */
 .song{
   margin: 40rpx 30rpx;
   display: flex;

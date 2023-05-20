@@ -1,0 +1,14 @@
+<!--pages/searchResPage/searchResPage.wxml-->
+<view class="song" wx:for="{{playList}}" wx:key="id" data-id="{{item.id}}" bindtap="toPlayPage">
+  <view class="index">{{index+1}} </view>
+  <view class="song-box">
+    <view class="song-name">
+      {{item.name}}
+    </view>
+    <view class="singers">
+      <view class="singer" wx:for="{{item.artists}}" wx:key="id" wx:for-item='i'>
+        {{i.name}}
+      </view>
+    </view>
+  </view>
+</view>

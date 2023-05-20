@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="padding">
   <view class="header mTop">
-    <input 	focus="true" class="search" type="text" placeholder="搜索" />
+    <input bindtap="toSearchPage"	focus="true" class="search" type="text" placeholder="搜索" />
   </view>
   <view class="recommend mTop">
     <title></title>
@@ -17,8 +17,8 @@
 
   <view class="banners">
     <swiper	indicator-dots	autoplay 	indicator-active-color="#fff">
-      <swiper-item wx:for="{{banners}}" wx:key="item.targetId" item-id="item.targetId">
-        <image src="{{item.pic}}" mode=""/>
+      <swiper-item wx:for="{{banners}}" wx:key="targetId" item-id="targetId">
+        <image src="{{item.pic}}" mode="" style="width: 100%; height: 100%;"/>
       </swiper-item>
     </swiper>
   </view>
