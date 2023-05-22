@@ -8,22 +8,36 @@ Page({
   data: {
     playList:[],
     allList: [],
-    currentIndex: 1,
+    currentIndex: 0,
     pageSize: 20,
     loadingMore: false
+  },
+
+  toPlayPage(option){
+    console.log(option.currentTarget.dataset.id);
+    let id = option.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '/pages/playPage/playPage?id=' + id
+    })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   async onLoad(options) {
-    let res = await request("/top/list", {
-      idx: options.idx
+    let res = await request("/playlist/detail", {
+      id: options.idx
     })
-    this.setData({
-      // playList: res.playlist.tracks
-      allList: res.playlist.tracks || res.result.songs
-    })
+    console.log(res);
+    if(res.code != 200){
+      console.log(res.message);
+    }else{
+      this.setData({
+        // playList: res.playlist.tracks
+        allList: res.playlist.tracks || res.result.songs
+      })
+    }
+    
     console.log(this.data.allList);
     this.renderNextPage()
   },
@@ -35,6 +49,9 @@ Page({
 
   renderNextPage() {
     const { currentIndex, pageSize, allList, playList } = this.data
+    
+    console.log(playList);
+    console.log(allList);
     if (playList.length >= allList.length) {
       return
     }
@@ -49,6 +66,8 @@ Page({
         currentIndex: currentIndex + 1
       })
 
+      console.log(playList);
+      console.log(allList);
       this.setData({
         loadingMore: false
       })

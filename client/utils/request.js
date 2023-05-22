@@ -1,8 +1,9 @@
 // 发送ajax
+import config from './config'
 export default (url, data = {}, method = 'GET') => {
   return new Promise((resolve, reject) => {
     let res = wx.request({
-      url: 'http://localhost:3000' + url,
+      url: config.host + url,
       data,
       method,
       success: (res) => {

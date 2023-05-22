@@ -29,9 +29,10 @@
   </view>
 
   <view class="rank mTop">
-    <title titleName="巅峰榜"></title>
-    <rank idx="1"></rank>
-    <rank idx="2"></rank>
-    <rank idx="3"></rank>
+    <title titleName="排行榜"></title>
+    <!-- <rank idx="{{topList[0].id}}"></rank>
+    <rank idx="{{topList[1].id}}"></rank>
+    <rank idx="{{topList[2].id}}"></rank> -->
+    <rank wx:for="{{topList}}" wx:key="id" idx='{{item.id}}' wx:if="{{index < 3}}"></rank>
   </view>
 </view>

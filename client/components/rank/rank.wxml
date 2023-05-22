@@ -1,14 +1,15 @@
 <!--components/rank/rank.wxml-->
-<view class="rankBox" bindtap="torankPage" >
+<view class="rankBox" bindtap="toRankPage" >
   <view class="rankContainer">
     <view class="rankTitle">
       {{playListName}}
     </view>
     <view class="rankPage">
       <view wx:if="{{ index<3 }}" class="song" wx:for="{{playList}}" wx:key="id">
-        {{index+1}}. {{item.name}} 
+        {{index+1}}. {{item.name}}
+        <text decode="true">&nbsp;-&nbsp;</text>
         <view class="singer" wx:for="{{item.ar}}" wx:for-item="j" wx:key="id">
-          - {{j.name}}
+          {{j.name}}
         </view>
       </view>
     </view>

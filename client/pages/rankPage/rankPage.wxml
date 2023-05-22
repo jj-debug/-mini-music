@@ -18,7 +18,7 @@
   class="scroll-wrapper" 
   scroll-y="true"
   bindscrolltolower="loadMore">
-  <view class="song" wx:for="{{playList}}" wx:key="id">
+  <view class="song" wx:for="{{playList}}" wx:key="id" bindtap="toPlayPage" data-id="{{item.id}}">
     <view class="index">{{index+1}} </view>
     <view class="song-box">
       <view class="song-name">

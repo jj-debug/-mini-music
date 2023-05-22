@@ -8,6 +8,7 @@ Page({
   data: {
     banners: [],
     hotList: [],
+    topList: [],
   },
   
   async onLoad() {
@@ -15,13 +16,20 @@ Page({
       type: 2
     })
     let hotListData = await request('/personalized', {
+      limit: 6
+    })
+    let topListData = await request('/toplist', {
       limit: 5
     })
+    console.log(hotListData);
     this.setData({
       banners: bannersData.banners,
       hotList: hotListData.result,
+      topList: topListData.list,
     })
-    console.log(this.data.hotList);
+    // console.log(this.data.topList[0].id);
+    // console.log(this.data.topList[1].id);
+    // console.log(this.data.topList[2].id);
   },
 
   toSearchPage() {
