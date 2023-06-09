@@ -10,7 +10,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "QQ音乐",
+    "navigationBarTitleText": "SIU音乐",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
@@ -33,5 +33,6 @@
       }
     ]
   },
-  "usingComponents": {}
+  "usingComponents": {},
+  "requiredBackgroundModes": ["audio"]
 }

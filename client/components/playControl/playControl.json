@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "usingComponents": {
+    "fui-dropdown-menu": "/components/fui-dropdown-menu/fui-dropdown-menu",
+    "fui-icon": "/components/fui-icon/fui-icon",
+    "fui-list-cell": "/components/fui-list-cell/fui-list-cell"
+  }
+}

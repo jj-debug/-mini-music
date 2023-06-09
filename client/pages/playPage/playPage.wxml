@@ -3,14 +3,15 @@
 
 <view class="album" bindtap="handlePlay">
   <image class="pic" src="{{alPic}}" mode="aspectFit"/>
-  <image class="float {{isPlay ? '':'active'}}" src="/static/img/pause.png" mode="scaleToFill" />
-  <image class="float {{isPlay ? 'active':''}}" src="/static/img/start.png" mode="aspectFit" />
+  <image class="float {{isPlay ? 'active':''}}" src="/static/img/start.png" mode="scaleToFill" />
+  <image class="float {{isPlay ? '':'active'}}" src="/static/img/pause.png" mode="aspectFit" />
 </view>
 <view class="info">
   <text class="songName" decode="{{true}} ">{{songName}}&ensp;-&ensp;</text>
   <view class="authors" wx:for="{{authors}}" wx:key="id"> {{item.name}} </view>
 </view>
 <scroll-view 
+  scroll-with-animation='true'
   style="height: 360rpx;"
   scroll-top="{{currentTimeFix}}" 
   scroll-y="true" >

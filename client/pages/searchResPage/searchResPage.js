@@ -11,6 +11,8 @@ Page({
 
   async toPlayPage(option) {
     console.log(option.currentTarget.dataset.id);
+    
+    getApp().globalData.allPlayList = this.data.playList
     let id = option.currentTarget.dataset.id
     wx.navigateTo({
       url: '/pages/playPage/playPage?id=' + id

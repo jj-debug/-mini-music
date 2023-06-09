@@ -32,8 +32,8 @@ Component({
       // })
       // console.log(this.data.id);
 
-      console.log(this.properties);
-      console.log(this.properties.idx);
+      // console.log(this.properties);
+      // console.log(this.properties.idx);
 
       let res = await request('/playlist/detail', {
         id: this.properties.idx

@@ -1,7 +1,6 @@
 // index.js
 // 获取应用实例
 import request from '../../utils/request'
-const app = getApp()
 
 
 Page({
@@ -9,27 +8,46 @@ Page({
     banners: [],
     hotList: [],
     topList: [],
+    allPlayList: getApp().globalData.allPlayList,
+    playingSongName: getApp().globalData.playingSongName,
   },
   
   async onLoad() {
+    // 获取轮播图
     let bannersData = await request('/banner', {
       type: 2
     })
+    // 获取专辑列表
     let hotListData = await request('/personalized', {
       limit: 6
     })
+    // 获取排行榜
     let topListData = await request('/toplist', {
       limit: 5
     })
-    console.log(hotListData);
     this.setData({
       banners: bannersData.banners,
       hotList: hotListData.result,
       topList: topListData.list,
     })
-    // console.log(this.data.topList[0].id);
-    // console.log(this.data.topList[1].id);
-    // console.log(this.data.topList[2].id);
+    
+  },
+
+  onReady() {
+    // console.log('ready');
+  },
+  onShow() {
+    // console.log('show');
+    // // 获取背景音乐
+    // let bgm = wx.getBackgroundAudioManager()
+    // console.log('bgm', bgm);
+    // console.log('bgm.title', bgm.title);
+    // console.log('bgm.coverImgUrl', bgm.coverImgUrl);
+    // console.log("getApp().globalData.allPlayList", getApp().globalData.allPlayList);
+    this.setData({
+      allPlayList: getApp().globalData.allPlayList,
+      playingSongName: getApp().globalData.playingSongName,
+    })
   },
 
   toSearchPage() {
@@ -56,5 +74,6 @@ Page({
   getUserInfo(e) {
     // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
     console.log(e)
-  }
+  },
+
 })

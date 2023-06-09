@@ -5,10 +5,10 @@
       {{playListName}}
     </view>
     <view class="rankPage">
-      <view wx:if="{{ index<3 }}" class="song" wx:for="{{playList}}" wx:key="id">
+      <view style="white-space:nowrap" wx:if="{{ index<3 }}" class="song" wx:for="{{playList}}" wx:key="id">
         {{index+1}}. {{item.name}}
-        <text decode="true">&nbsp;-&nbsp;</text>
-        <view class="singer" wx:for="{{item.ar}}" wx:for-item="j" wx:key="id">
+        <text style="color: #aaa;" decode="true">&nbsp;-&nbsp;</text>
+        <view  class="singer" wx:for="{{item.ar}}" wx:for-item="j" wx:key="id">
           {{j.name}}
         </view>
       </view>

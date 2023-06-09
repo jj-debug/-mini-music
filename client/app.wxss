@@ -2,10 +2,10 @@
 
 page{
   background: #eee;
-  padding-bottom: 30rpx;
+  padding-bottom: 100rpx;
 }
 .padding {
-  padding: 0rpx 40rpx;
+  padding: 0rpx 30rpx;
 }
 .mTop {
   margin-top: 50rpx;

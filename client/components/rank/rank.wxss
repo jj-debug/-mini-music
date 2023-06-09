@@ -11,6 +11,9 @@
   display: flex;
   justify-content: space-between;
 }
+.rankContainer{
+  max-width: 380rpx;
+}
 
 .rankTitle{
   font-size: 30rpx;
@@ -18,7 +21,7 @@
   margin-bottom: 16rpx;
 }
 .rankPage{
-  font-size: 23rpx;
+  font-size: 22rpx;
   height: 50rpx;
 }
 .rankPage .song{
@@ -29,6 +32,11 @@
   margin-left: 5rpx;
   color: #aaa;
 }
+.rankPage .singer:last-child{
+  white-space: nowrap;  
+  text-overflow:ellipsis; 
+  overflow:hidden;
+}
 .rankPage .singer::after{
   content: "/";
 }
@@ -37,6 +45,6 @@
 }
 
 .rankAlbum .img{
-  width: 200rpx;
-  height: 200rpx;
+  width: 210rpx;
+  height: 210rpx;
 }

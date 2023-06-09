@@ -6,40 +6,23 @@ Page({
    * 页面的初始数据
    */
   data: {
-    playList:[],
-    allList: [],
+    playListName: '',
+    playList:[], // 页面要展示的音乐
+    allList: [], // 保存全部音乐
     currentIndex: 0,
     pageSize: 20,
     loadingMore: false
   },
 
   toPlayPage(option){
-    console.log(option.currentTarget.dataset.id);
+    // console.log(option.currentTarget.dataset.id);
+    getApp().globalData.allPlayList = this.data.allList
+    console.log("getApp().globalData", getApp().globalData);
+    
     let id = option.currentTarget.dataset.id
     wx.navigateTo({
       url: '/pages/playPage/playPage?id=' + id
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  async onLoad(options) {
-    let res = await request("/playlist/detail", {
-      id: options.idx
-    })
-    console.log(res);
-    if(res.code != 200){
-      console.log(res.message);
-    }else{
-      this.setData({
-        // playList: res.playlist.tracks
-        allList: res.playlist.tracks || res.result.songs
-      })
-    }
-    
-    console.log(this.data.allList);
-    this.renderNextPage()
   },
 
   loadMore() {
@@ -50,8 +33,8 @@ Page({
   renderNextPage() {
     const { currentIndex, pageSize, allList, playList } = this.data
     
-    console.log(playList);
-    console.log(allList);
+    // console.log(playList);
+    // console.log(allList);
     if (playList.length >= allList.length) {
       return
     }
@@ -66,12 +49,35 @@ Page({
         currentIndex: currentIndex + 1
       })
 
-      console.log(playList);
-      console.log(allList);
+      // console.log(playList);
+      // console.log(allList);
       this.setData({
         loadingMore: false
       })
     }, 500)
+  },
+
+  /**
+   * 生命周期函数--监听页面加载
+   */
+  async onLoad(options) {
+    let res = await request("/playlist/detail", {
+      id: options.idx
+    })
+    // console.log(res);
+    if(res.code != 200){
+      console.log(res.message);
+    }else{
+      this.setData({
+        playListName: res.playlist.name,
+        allList: res.playlist.tracks || res.result.songs
+      })
+    }
+    wx.setNavigationBarTitle({
+      title: this.data.playListName
+    })
+    // console.log(this.data.allList);
+    this.renderNextPage()
   },
 
   /**

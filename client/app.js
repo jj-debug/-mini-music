@@ -14,6 +14,15 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    allPlayList: [],
+    playStatus: true,
+    playingSrc: '',
+    playingSongID: '',  // 歌ID
+    playingSongName: '',  // 歌名
+    playingAuthors: [],   // 歌手
+    playingAlName: '',    // 专辑名
+    playingAlPic: '',     // 专辑图片
+    bgm: wx.getBackgroundAudioManager()
   }
 })

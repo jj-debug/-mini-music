@@ -1,7 +1,7 @@
 <!--index.wxml-->
 <view class="padding">
   <view class="header mTop">
-    <input bindtap="toSearchPage"	focus="true" class="search" type="text" placeholder="搜索" />
+    <input bindtap="toSearchPage" class="search" type="text" placeholder="搜索" />
   </view>
   <view class="recommend mTop">
     <title></title>
@@ -35,4 +35,6 @@
     <rank idx="{{topList[2].id}}"></rank> -->
     <rank wx:for="{{topList}}" wx:key="id" idx='{{item.id}}' wx:if="{{index < 3}}"></rank>
   </view>
+
+  <playControl wx:if="{{allPlayList.length > 0}}"></playControl>
 </view>

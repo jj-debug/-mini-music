@@ -1,0 +1,27 @@
+<!--components/playControl/playControl.wxml-->
+<view class="allPlayList {{tagShow?'':'hidden'}} ">
+  <scroll-view 
+  scroll-y="true" 
+  style="height: 400rpx;" >
+    <view 
+    class="scroll-view-item {{index == highLightIndex? 'highlight-active':''}}" 
+    wx:for="{{allPlayList}}" 
+    wx:key="id"
+    id="{{item.id}}"
+    bindtap="toggle">{{item.value}}</view>
+  </scroll-view>
+</view>
+
+<view class="ctrl"  bindupdate='updatePlaying'>
+  <image class="al-pic" bindtap="toPlayPage" src="{{ playingAlPic }}" mode=""/>
+  <view class="songName">
+    {{ playingSongName }}
+  </view>
+  
+  <view class="buttons">
+    <image class="{{playStatus ? 'active':''}}" bindtap="handlePlay" src="/static/img/start-sel.png" mode=""/>
+    <image class="{{playStatus ? '':'active'}}" bindtap="handlePlay" src="/static/img/pause-sel.png" mode=""/>
+    <image bindtap="listShow" src="/static/img/list-sel.png" mode=""/>
+  </view>
+
+</view>
